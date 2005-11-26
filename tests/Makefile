@@ -1,7 +1,7 @@
 # Dirty little tests
 
 CMP = bzcmp
-CFLAGS = -I.. -Wall -g -ggdb
+CFLAGS = -I.. -Wall
 LDFLAGS = -L../.libs -llzw -Wl,-rpath,../.libs
 
 all install:
@@ -18,7 +18,7 @@ simple2_test: simple2
 
 lot_test: lot
 	./lot > lot.out
-	$(CMP) lot.out lot.good
+	$(CMP) lot.out lot.good.bz2
 
 distdir:
 	@cp Makefile *.bz2 $(distdir)
