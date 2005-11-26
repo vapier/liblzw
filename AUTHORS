@@ -1,0 +1,13 @@
+ncompress authors:
+  Spencer W. Thomas   (decvax!harpo!utah-cs!utah-gr!thomas)
+  Jim McKie           (decvax!mcvax!jim)
+  Steve Davies        (decvax!vax135!petsd!peora!srd)
+  Ken Turkowski       (decvax!decwrl!turtlevax!ken)
+  James A. Woods      (decvax!ihnp4!ames!jaw)
+  Joe Orost           (decvax!vax135!petsd!joe)
+  Dave Mack           (csu@alembic.acs.com)
+  Peter Jannesen, Network Communication Systems
+                      (peter@ncs.nl)
+
+liblzw authors:
+  Mike Frysinger <vapier@gmail.com>
