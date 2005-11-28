@@ -13,6 +13,10 @@
 #ifndef _LZW_H
 #define _LZW_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define LZW_MAGIC_1 0x1F
 #define LZW_MAGIC_2 0x9D
 #define LZW_MAGIC   "\037\235"
@@ -50,5 +54,9 @@ extern lzwFile *lzw_open(const char*, int, ...);
 extern lzwFile* lzw_fdopen(int);
 extern int lzw_close(lzwFile*);
 extern ssize_t lzw_read(lzwFile*, void*, size_t);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* _LZW_H */
