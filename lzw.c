@@ -21,8 +21,10 @@
 
 #ifdef __IN_LIBSTDF
 # include <libstdf.h>
+# define libstdf_hidden attribute_hidden
 #else
 # include "lzw_internal.h"
+# define libstdf_hidden
 #endif
 
 
@@ -42,6 +44,7 @@
 /*
  * Open LZW file
  */
+libstdf_hidden
 lzwFile *lzw_fdopen(int fd)
 {
 	lzwFile *ret;
@@ -105,6 +108,7 @@ err_out_free:
 	return NULL;
 }
 
+libstdf_hidden
 lzwFile *lzw_open(const char *pathname, int flags, ...)
 {
 	mode_t mode = 0;
@@ -128,6 +132,7 @@ lzwFile *lzw_open(const char *pathname, int flags, ...)
 /*
  * Close LZW file
  */
+libstdf_hidden
 int lzw_close(lzwFile *lzw)
 {
 	int ret;
@@ -181,6 +186,7 @@ union bytes {
 /*
  * Read LZW file
  */
+libstdf_hidden
 ssize_t lzw_read(lzwFile *lzw, void *readbuf, size_t count)
 {
 	size_t count_left = count;
