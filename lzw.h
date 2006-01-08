@@ -33,8 +33,9 @@ typedef struct {
 
 	unsigned char *inbuf, *outbuf, *stackp;
 	unsigned char *unreadbuf;
-	int stackp_diff;
-	size_t insize, outpos, rsize;
+	size_t stackp_diff;
+	size_t insize, outpos;
+	ssize_t rsize;
 
 	unsigned char flags;
 	int maxbits, block_mode;
