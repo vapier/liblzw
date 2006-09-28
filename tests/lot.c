@@ -1,4 +1,4 @@
-/* Copyright (C) 2005 Mike Frysinger <vapier@gmail.com>
+/* Copyright (C) 2005-2006 Mike Frysinger <vapier@gmail.com>
  */
 
 #include <lzw_internal.h>
@@ -20,7 +20,6 @@ int main(int argc, char *argv[])
 			printf("%2.2X", (unsigned char)buf[cnt]);
 		printf("\n");
 	}
-		
 
 	if (lzw_close(lzw))
 		err("could not close file");
