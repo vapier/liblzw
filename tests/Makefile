@@ -21,7 +21,7 @@ lot_test: lot
 	$(CMP) lot.out lot.good.bz2
 
 distdir:
-	@cp Makefile *.bz2 $(distdir)
+	@cp Makefile *.c *.Z *.bz2 $(distdir)
 
 clean:
 	rm -f *.out lot simple simple2

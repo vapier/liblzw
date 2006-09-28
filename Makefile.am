@@ -1,3 +1,6 @@
+# We omit the tests as more than quadruples the size of the tarball
+# SUBDIRS = tests
+
 bin_SCRIPTS = liblzw-config
 
 pkgconfigdir = $(libdir)/pkgconfig
