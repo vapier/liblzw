@@ -1,8 +1,6 @@
 /*
- * Copyright (C) 2005 Mike Frysinger <vapier@gmail.com>
+ * Copyright (C) 2005-2006 Mike Frysinger <vapier@gmail.com>
  * Released into the public domain
- *
- * $Header$
  */
 
 #ifndef _LIBLZW_INTERNAL_H
