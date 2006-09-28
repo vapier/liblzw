@@ -251,6 +251,7 @@ resetbuf:
 			input(inbuf,lzw->posbits,lzw->code,lzw->n_bits,lzw->bitmask);
 
 			if (lzw->oldcode == -1) {
+				if (lzw->code >= 256) return -1; /* error("corrupt input."); */
 				outbuf[lzw->outpos++] = lzw->finchar = lzw->oldcode = lzw->code;
 				continue;
 			}
