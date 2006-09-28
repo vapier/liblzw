@@ -7,7 +7,7 @@ If you downloaded a source tarball:
 (2) make
 (3) sudo make install
 
-If you're using CVS:
+If you're using subversion:
 (0) ./autogen.sh
 (1) ./configure
 (2) make

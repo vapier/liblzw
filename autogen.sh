@@ -1,6 +1,6 @@
 #!/bin/sh
 
-if test -d CVS ; then
+if test -d .svn ; then
 	if test -d ../m4 ; then
 		rm -rf m4 || exit 1
 		mkdir -p m4 || exit 1
