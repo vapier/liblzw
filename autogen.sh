@@ -8,7 +8,7 @@ if test -d .svn ; then
 	fi
 fi
 
-autoreconf
+autoreconf -i -f
 
 if test -x ./test.sh ; then
 	exec ./test.sh "$@"
