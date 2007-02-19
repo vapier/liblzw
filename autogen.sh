@@ -10,6 +10,9 @@ fi
 
 autoreconf -i -f
 
+# broken autotools wrongly clobbers our INSTALL
+svn revert INSTALL >& /dev/null || true
+
 if test -x ./test.sh ; then
 	exec ./test.sh "$@"
 fi

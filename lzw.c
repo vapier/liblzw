@@ -1,4 +1,4 @@
-/* Copyright (C) 2005 Mike Frysinger <vapier@gmail.com>
+/* Copyright (C) 2005-2007 Mike Frysinger <vapier@gmail.com>
  *
  * Original code was ripped from ncompress-4.2.4.tar.gz,
  * and it is all public domain code, so have fun you wh0res.
@@ -21,7 +21,7 @@
 
 #ifdef __IN_LIBSTDF
 # include <libstdf.h>
-# define hidden_in_another_lib attribute_hidden
+# define hidden_in_another_lib stdf_attribute_hidden
 #else
 # include "lzw_internal.h"
 # define hidden_in_another_lib
