@@ -1,4 +1,4 @@
-/* Copyright (C) 2005-2006 Mike Frysinger <vapier@gmail.com>
+/* Copyright (C) 2005-2007 Mike Frysinger <vapier@gmail.com>
  */
 
 #include <lzw_internal.h>
@@ -7,7 +7,7 @@
 
 int main(int argc, char *argv[])
 {
-	int cnt;
+	size_t cnt;
 	size_t numread;
 	char buf[1024];
 	lzwFile *lzw = lzw_open(argc == 2 ? argv[1] : "lot.Z", O_RDONLY);
