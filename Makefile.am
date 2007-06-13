@@ -1,5 +1,4 @@
-# We omit the tests as more than quadruples the size of the tarball
-# SUBDIRS = tests
+SUBDIRS = tests
 
 bin_SCRIPTS = liblzw-config
 

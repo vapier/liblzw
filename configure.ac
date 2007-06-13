@@ -13,8 +13,12 @@ string.h features.h stdarg.h sys/cdefs.h assert.h \
 
 AM_STDF_VAPIER_DEV
 
+AM_MISSING_PROG([AUTOM4TE], [autom4te])
+AC_CONFIG_TESTDIR(tests)
+
 AC_OUTPUT([
 Makefile
+tests/Makefile
 liblzw-config
 liblzw.pc
 ],[
