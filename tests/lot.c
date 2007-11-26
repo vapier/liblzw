@@ -1,7 +1,9 @@
 /* Copyright (C) 2005-2007 Mike Frysinger <vapier@gmail.com>
  */
 
-#include <lzw_internal.h>
+#include "headers.h"
+#include "helpers.h"
+#include <lzw.h>
 
 #define err(fmt, args...) do { warn(fmt, ## args); exit(-1); } while (0)
 

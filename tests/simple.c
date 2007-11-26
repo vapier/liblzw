@@ -1,13 +1,15 @@
-/* Copyright (C) 2005-2006 Mike Frysinger <vapier@gmail.com>
+/* Copyright (C) 2005-2007 Mike Frysinger <vapier@gmail.com>
  */
 
-#include <lzw_internal.h>
+#include "headers.h"
+#include "helpers.h"
+#include <lzw.h>
 
 #define err(fmt, args...) do { warn(fmt, ## args); exit(-1); } while (0)
 
 int main(int argc, char *argv[])
 {
-	int cnt;
+	size_t cnt;
 	size_t numread;
 	char buf[1024];
 	lzwFile *lzw = lzw_open(argc == 2 ? argv[1] : "simple.Z", O_RDONLY);

@@ -6,7 +6,7 @@ pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = liblzw.pc
 
 include_HEADERS = lzw.h
-noinst_HEADERS = lzw_internal.h
+noinst_HEADERS = lzw_internal.h headers.h helpers.h
 
 lib_LTLIBRARIES = liblzw.la
 liblzw_la_SOURCES = lzw.c
