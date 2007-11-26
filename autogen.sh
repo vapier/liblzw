@@ -5,6 +5,7 @@ if test -d .svn ; then
 		rm -rf m4
 		mkdir -p m4
 		cp ../m4/*.m4 m4/
+		cp ../m4/*.at tests/
 	fi
 fi
 
