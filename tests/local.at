@@ -7,7 +7,7 @@ AT_SETUP([$1])
 AT_CHECK([
 "$[]builddir/$1" "$[]top_srcdir/tests/$1.Z" > $1.out
 ret=$[]?
-bzcmp "$[]top_srcdir/tests/$1.good.bz2" $1.out
+bzdiff -u "$[]top_srcdir/tests/$1.good.bz2" $1.out
 (exit $[]ret)
 ],[0])
 
