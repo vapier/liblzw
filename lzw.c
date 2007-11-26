@@ -157,15 +157,15 @@ int lzw_close(lzwFile *lzw)
 union bytes {
 	long word;
 	struct {
-#if BYTE_ORDER == BIG_ENDIAN
+#ifdef WORDS_BIGENDIAN
 		unsigned char b1, b2, b3, b4;
-#elif BYTE_ORDER == LITTLE_ENDIAN
+#else
 		unsigned char b4, b3, b2, b1;
 #endif
 	} bytes;
 };
 
-#if BYTE_ORDER == BIG_ENDIAN && NOALLIGN == 1
+#if defined(WORDS_BIGENDIAN) && NOALLIGN == 1
 # define input(b,o,c,n,m) \
 	do { \
 		(c) = (*(long *)(&(b)[(o)>>3])>>((o)&0x7))&(m); \
