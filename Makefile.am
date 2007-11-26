@@ -16,4 +16,3 @@ liblzw_la_LDFLAGS = -no-suppress -version-info 0:1:0
 EXTRA_DIST = AUTHORS COPYING ChangeLog INSTALL NEWS README
 
 ACLOCAL_AMFLAGS = -I m4
-AUTOMAKE_OPTIONS = dist-bzip2 no-dist-gzip
