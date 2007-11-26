@@ -56,14 +56,14 @@ lzwFile *lzw_fdopen(int fd)
 	if (buf[0] != LZW_MAGIC_1 || buf[1] != LZW_MAGIC_2 || buf[2] & 0x60)
 		goto err_out;
 
-	if ((ret = (lzwFile*)malloc(sizeof(lzwFile))) == NULL)
+	if ((ret = malloc(sizeof(*ret))) == NULL)
 		goto err_out;
 
 	memset(ret, 0x00, sizeof(*ret));
 	ret->fd = fd;
 	ret->eof = 0;
-	ret->inbuf = (unsigned char*)malloc(sizeof(unsigned char) * IN_BUFSIZE);
-	ret->outbuf = (unsigned char*)malloc(sizeof(unsigned char) * OUT_BUFSIZE);
+	ret->inbuf = malloc(sizeof(unsigned char) * IN_BUFSIZE);
+	ret->outbuf = malloc(sizeof(unsigned char) * OUT_BUFSIZE);
 	ret->stackp = NULL;
 	ret->insize = 3; /* we read three bytes above */
 	ret->outpos = 0;
