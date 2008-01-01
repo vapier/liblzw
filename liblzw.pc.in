@@ -5,7 +5,7 @@ includedir=@includedir@
 
 Name: liblzw
 Description: lzw compression library
-Requires: @requirements@
+Requires:
 Version: @VERSION@
 Libs: -L${libdir} -llzw
 Cflags: -I${includedir}
