@@ -1,4 +1,4 @@
-AC_INIT(liblzw, 0.1.1, [vapier@gmail.com])
+AC_INIT(liblzw, 0.1.2, [vapier@gmail.com])
 AM_INIT_AUTOMAKE([1.10 dist-bzip2 no-dist-gzip])dnl dist-lzma
 AC_CONFIG_HEADER(config.h)
 
