@@ -17,6 +17,7 @@ $(srcdir)/package.m4: $(top_srcdir)/configure.ac
 
 TESTSUITE_AT = \
 	local.at \
+	stdf_bzcheck.at \
 	testsuite.at
 
 check-local: atconfig $(TESTSUITE)
