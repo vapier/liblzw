@@ -1,19 +1,10 @@
 EXTRA_DIST = $(TESTSUITE_AT) testsuite.at $(TESTSUITE) \
+	tests.h \
 	lot.good.bz2 lot.Z \
 	simple.good.bz2 simple.Z \
 	simple2.good.bz2 simple2.Z
 TESTSUITE = $(srcdir)/testsuite
 DISTCLEANFILES = atconfig
-
-$(srcdir)/package.m4: $(top_srcdir)/configure.ac
-	{ \
-	echo '# Signature of the current package.'; \
-	echo 'm4_define([AT_PACKAGE_NAME],      [@PACKAGE_NAME@])'; \
-	echo 'm4_define([AT_PACKAGE_TARNAME],   [@PACKAGE_TARNAME@])'; \
-	echo 'm4_define([AT_PACKAGE_VERSION],   [@PACKAGE_VERSION@])'; \
-	echo 'm4_define([AT_PACKAGE_STRING],    [@PACKAGE_STRING@])'; \
-	echo 'm4_define([AT_PACKAGE_BUGREPORT], [@PACKAGE_BUGREPORT@])'; \
-	} > $@
 
 TESTSUITE_AT = \
 	local.at \
@@ -30,10 +21,10 @@ clean-local:
 	test ! -f '$(TESTSUITE)' || $(SHELL) '$(TESTSUITE)' --clean
 
 AUTOTEST = $(AUTOM4TE) --language=autotest
-$(TESTSUITE): package.m4 $(TESTSUITE_AT)
-	$(AUTOTEST) -I $(srcdir) testsuite.at -o $@.tmp
+$(TESTSUITE): $(TESTSUITE_AT)
+	$(AUTOTEST) -I '$(srcdir)' -o $@.tmp $@.at
 	mv $@.tmp $@
 
-check_PROGRAMS = lot simple simple2
+check_PROGRAMS = lot simple simple2 uncompress
 INCLUDES = -I$(top_srcdir)
 LDADD = ../liblzw.la

@@ -1,5 +1,5 @@
-AC_INIT(liblzw, 0.1.2, [vapier@gmail.com])
-AM_INIT_AUTOMAKE([1.10 dist-bzip2 no-dist-gzip])dnl dist-lzma
+AC_INIT(liblzw, 0.2, [vapier@gmail.com])
+AM_INIT_AUTOMAKE([1.10 dist-bzip2 no-dist-gzip silent-rules])dnl dist-lzma
 AC_CONFIG_HEADER(config.h)
 
 AC_PROG_CC
@@ -21,6 +21,7 @@ AC_CONFIG_TESTDIR(tests)
 AC_OUTPUT([
 Makefile
 tests/Makefile
+tests/package.m4
 liblzw-config
 liblzw.pc
 ],[
