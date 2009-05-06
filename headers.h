@@ -59,4 +59,9 @@ extern int errno;
 # include <assert.h>
 #endif
 
+/* i'll see you in hell windows */
+#if !defined(O_BINARY)
+# define O_BINARY 0x00
+#endif
+
 #endif /* _LIBLZW_HEADERS_H */
