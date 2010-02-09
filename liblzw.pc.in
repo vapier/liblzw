@@ -3,9 +3,8 @@ exec_prefix=@exec_prefix@
 libdir=@libdir@
 includedir=@includedir@
 
-Name: liblzw
+Name: @PACKAGE_NAME@
 Description: lzw compression library
-Requires:
-Version: @VERSION@
+Version: @PACKAGE_VERSION@
 Libs: -L${libdir} -llzw
 Cflags: -I${includedir}

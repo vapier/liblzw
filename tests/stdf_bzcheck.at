@@ -1,0 +1,16 @@
+dnl these suckers create megs of output which autotest
+dnl cant handle so do bzcmp ourselves
+m4_defun([AT_QUICK_BZCHECK],[
+
+AT_SETUP([$1])
+
+AT_CHECK([
+"$[]builddir/$1" "$[]top_srcdir/tests/$1.Z" > $1.out
+ret=$[]?
+bzdiff -u "$[]top_srcdir/tests/$1.good.bz2" $1.out
+(exit $[]ret)
+],[0])
+
+AT_CLEANUP
+
+])
