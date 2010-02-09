@@ -1,3 +1,6 @@
+0.2
+	* Avoid integer overflow for CVE-2010-0001
+
 0.1.2
 	* Bundle testsuite
 	* Fix liblzw.pc.in file as pointed out by Tester A.

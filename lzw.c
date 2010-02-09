@@ -214,8 +214,9 @@ ssize_t lzw_read(lzwFile *lzw, void *readbuf, size_t count)
 	do {
 resetbuf:
 		{
-			int	i, e, o;
-			e = lzw->insize - (o = (lzw->posbits >> 3));
+			size_t i, e, o;
+			o = lzw->posbits >> 3;
+			e = o <= lzw->insize ? lzw->insize - o : 0;
 
 			for (i = 0; i < e; ++i)
 				inbuf[i] = inbuf[i+o];
