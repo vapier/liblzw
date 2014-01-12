@@ -26,5 +26,5 @@ $(TESTSUITE): $(TESTSUITE_AT)
 	mv $@.tmp $@
 
 check_PROGRAMS = lot simple simple2 uncompress
-INCLUDES = -I$(top_srcdir)
+AM_CPPFLAGS = -I$(top_srcdir)
 LDADD = ../liblzw.la

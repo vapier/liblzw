@@ -1,15 +1,19 @@
-AC_INIT([liblzw], [0.2], [vapier@gmail.com])
-AM_INIT_AUTOMAKE([1.11 dist-lzma no-dist-gzip silent-rules])
-AM_SILENT_RULES([yes])
+AC_INIT([liblzw], [0.3], [vapier@gmail.com])
+AC_CONFIG_AUX_DIR([build-aux])
+AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_HEADER([config.h])
+
+AM_INIT_AUTOMAKE([-Wall 1.11 dist-xz no-dist-gzip silent-rules])
+AM_SILENT_RULES([yes])
+
+AC_LIBTOOL_WIN32_DLL
+AM_PROG_AR
+LT_INIT
+AC_ENABLE_SHARED
+AC_ENABLE_STATIC
 
 AC_PROG_CC
 AC_C_BIGENDIAN
-
-AC_LIBTOOL_WIN32_DLL
-AC_PROG_LIBTOOL
-AC_ENABLE_SHARED
-AC_ENABLE_STATIC
 
 AC_CHECK_HEADERS_ONCE(m4_flatten([
 	assert.h

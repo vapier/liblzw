@@ -14,3 +14,5 @@ liblzw_la_CFLAGS = -no-suppress
 liblzw_la_LDFLAGS = -no-suppress -version-info 0:1:0 -no-undefined
 
 EXTRA_DIST = AUTHORS COPYING ChangeLog INSTALL NEWS README
+
+ACLOCAL_FLAGS = -I m4
