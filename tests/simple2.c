@@ -1,4 +1,7 @@
-/* Copyright (C) 2005-2009 Mike Frysinger <vapier@gmail.com> */
+/*
+ * Written by Mike Frysinger <vapier@gmail.com>
+ * Released into the public domain
+ */
 
 #include "tests.h"
 

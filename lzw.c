@@ -1,7 +1,8 @@
-/* Copyright (C) 2005-2007 Mike Frysinger <vapier@gmail.com>
- *
+/*
  * Original code was ripped from ncompress-4.2.4.tar.gz,
  * and it is all public domain code, so have fun you wh0res.
+ *
+ * Librarification by Mike Frysinger <vapier@gmail.com>
  *
  * http://www.dogma.net/markn/articles/lzw/lzw.htm
  *

@@ -1,7 +1,8 @@
 /* Simple app to show how to uncompress an entire file.  Same thing
  * as running: uncompress -d -c file
  *
- * Copyright (C) 2005-2009 Mike Frysinger <vapier@gmail.com>
+ * Written by Mike Frysinger <vapier@gmail.com>
+ * Released into the public domain
  */
 
 #include "tests.h"
