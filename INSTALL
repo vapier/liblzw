@@ -1,4 +1,4 @@
-HOMEPAGE:    http://freestdf.sourceforge.net/liblzw.php
+HOMEPAGE:    https://github.com/vapier/liblzw
 AUTHOR:      Mike Frysinger <vapier@gmail.com>
 
 --- Compiling [*nix] ---
@@ -7,7 +7,7 @@ If you downloaded a source tarball:
 (2) make
 (3) sudo make install
 
-If you're using subversion:
+If you're using git:
 (0) ./autogen.sh
 (1) ./configure
 (2) make
