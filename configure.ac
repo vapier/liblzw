@@ -3,7 +3,7 @@ AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_HEADER([config.h])
 
-AM_INIT_AUTOMAKE([-Wall 1.11 dist-xz no-dist-gzip silent-rules])
+AM_INIT_AUTOMAKE([-Wall 1.11 dist-xz foreign no-dist-gzip silent-rules])
 AM_SILENT_RULES([yes])
 
 AC_LIBTOOL_WIN32_DLL
