@@ -33,9 +33,22 @@ AC_CHECK_HEADERS_ONCE(m4_flatten([
 	sys/types.h
 ]))
 
-dnl Let's get anal with compiling while on my dev box
-AS_CASE([$HOSTNAME],
-	[vapier*], [CFLAGS="$CFLAGS -Wall -Wextra -Wnonnull -Wundef -Werror"])
+dnl Do this at the end so -Werror isn't used in configure tests.
+AC_MSG_CHECKING([whether to enable -Werror])
+AC_ARG_ENABLE(
+	[werror],
+	[AS_HELP_STRING([--enable-werror], [Enable -Werror when compiling.])],
+	[],
+	[
+		dnl Enable on my dev box.
+		AS_CASE([$HOSTNAME$USER], [vapier*vapier], [enable_werror=vapier]
+	)]
+)
+AS_IF(
+	[test "$enable_werror" != "no"],
+	[AS_VAR_APPEND([CFLAGS], [" -Wall -Wextra -Wnonnull -Wundef -Werror"])]
+)
+AC_MSG_RESULT([$enable_werror])
 
 AM_MISSING_PROG([AUTOM4TE], [autom4te])
 AC_CONFIG_TESTDIR(tests)
