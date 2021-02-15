@@ -1,6 +1,6 @@
 /*
  * Written by Mike Frysinger <vapier@gmail.com>
- * Released into the public domain
+ * Released into the public domain.
  */
 
 #include "tests.h"

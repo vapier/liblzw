@@ -1,6 +1,6 @@
 /*
  * Written by Mike Frysinger <vapier@gmail.com>
- * Released into the public domain
+ * Released into the public domain.
  */
 
 #ifndef _LIBLZW_INTERNAL_H

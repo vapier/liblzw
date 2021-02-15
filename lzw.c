@@ -1,10 +1,9 @@
 /*
- * Original code was ripped from ncompress-4.2.4.tar.gz,
- * and it is all public domain code, so have fun you wh0res.
+ * Original code was ripped from ncompress:
+ *   https://github.com/vapier/ncompress
+ * It is all public domain code, so have fun.
  *
  * Librarification by Mike Frysinger <vapier@gmail.com>
- *
- * http://www.dogma.net/markn/articles/lzw/lzw.htm
  *
  * (N)compress42.c - File compression ala IEEE Computer, Mar 1992.
  *
@@ -30,7 +29,7 @@
 
 
 /*
- * Misc common define cruft
+ * Misc common define cruft.
  */
 #define BUFSIZE      4
 #define IN_BUFSIZE   (BUFSIZE + 64)
@@ -43,7 +42,7 @@
 
 
 /*
- * Open LZW file
+ * Open LZW file.
  */
 hidden_in_another_lib
 lzwFile *lzw_fdopen(int fd)
@@ -131,7 +130,7 @@ lzwFile *lzw_open(const char *pathname, int flags, ...)
 
 
 /*
- * Close LZW file
+ * Close LZW file.
  */
 hidden_in_another_lib
 int lzw_close(lzwFile *lzw)
@@ -148,7 +147,7 @@ int lzw_close(lzwFile *lzw)
 
 
 /*
- * Misc read-specific define cruft
+ * Misc read-specific define cruft.
  */
 
 #define input(b,o,c,n,m) \
@@ -162,7 +161,7 @@ int lzw_close(lzwFile *lzw)
 #define de_stack				((unsigned char *)&(lzw->htab[HSIZE-1]))
 
 /*
- * Read LZW file
+ * Read LZW file.
  */
 hidden_in_another_lib
 ssize_t lzw_read(lzwFile *lzw, void *readbuf, size_t count)
