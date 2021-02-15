@@ -151,36 +151,13 @@ int lzw_close(lzwFile *lzw)
  * Misc read-specific define cruft
  */
 
-#ifndef	NOALLIGN
-# define NOALLIGN	0
-#endif
-
-union bytes {
-	long word;
-	struct {
-#ifdef WORDS_BIGENDIAN
-		unsigned char b1, b2, b3, b4;
-#else
-		unsigned char b4, b3, b2, b1;
-#endif
-	} bytes;
-};
-
-#if defined(WORDS_BIGENDIAN) && NOALLIGN == 1
-# define input(b,o,c,n,m) \
-	do { \
-		(c) = (*(long *)(&(b)[(o)>>3])>>((o)&0x7))&(m); \
-		(o) += (n); \
-	} while (0)
-#else
-# define input(b,o,c,n,m) \
+#define input(b,o,c,n,m) \
 	do { \
 		unsigned char *p = &(b)[(o)>>3]; \
 		(c) = ((((long)(p[0]))|((long)(p[1])<<8)| \
 		       ((long)(p[2])<<16))>>((o)&0x7))&(m); \
 		(o) += (n); \
 	} while (0)
-#endif
 
 #define de_stack				((unsigned char *)&(lzw->htab[HSIZE-1]))
 
