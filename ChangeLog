@@ -1,17 +1,17 @@
 0.3
-	* Delete liblzw-config script
-	* Refresh build system
-	* Cleanup code portability a little
+* Delete liblzw-config script
+* Refresh build system
+* Cleanup code portability a little
 
 0.2
-	* Avoid integer overflow for CVE-2010-0001
+* Avoid integer overflow for CVE-2010-0001
 
 0.1.2
-	* Bundle testsuite
-	* Fix liblzw.pc.in file as pointed out by Tester A.
+* Bundle testsuite
+* Fix liblzw.pc.in file as pointed out by Tester A.
 
 0.1.1
-	* Fix buffer underflow bug CVE-2006-1168
+* Fix buffer underflow bug CVE-2006-1168
 
 0.1
-	* Proof of concept which can open/read files
+* Proof of concept which can open/read files
