@@ -111,13 +111,19 @@ err_out_free:
 hidden_in_another_lib
 lzwFile *lzw_open(const char *pathname, int flags, ...)
 {
-	mode_t mode = 0;
+	/*
+	 * NB: This would be mode_t, but that tends to be 16-bit, and va_arg wants
+	 * register-sized variables like int.  On some compilers, passing a smaller
+	 * value to va_arg triggers an undefined behavior warning.  On the upside,
+	 * I'm not aware of any system that matters where int doesn't work.
+	 */
+	int mode = 0;
 	int fd;
 
 	if (flags & O_CREAT) {
 		va_list ap;
 		va_start(ap, flags);
-		mode = va_arg(ap, mode_t);
+		mode = va_arg(ap, int);
 		va_end(ap);
 	}
 
