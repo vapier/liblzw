@@ -1,4 +1,4 @@
-AC_INIT([liblzw], [0.3], [https://github.com/vapier/liblzw/issues], [], [https://github.com/vapier/liblzw])
+AC_INIT([liblzw], [0.4], [https://github.com/vapier/liblzw/issues], [], [https://github.com/vapier/liblzw])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_HEADER([config.h])
