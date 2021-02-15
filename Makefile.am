@@ -1,7 +1,5 @@
 SUBDIRS = tests
 
-bin_SCRIPTS = liblzw-config
-
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = liblzw.pc
 

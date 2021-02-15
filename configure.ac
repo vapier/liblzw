@@ -47,6 +47,5 @@ AC_CONFIG_FILES([
 	tests/package.m4
 	liblzw.pc
 ])
-AC_CONFIG_FILES([liblzw-config], [chmod +x liblzw-config])
 
 AC_OUTPUT

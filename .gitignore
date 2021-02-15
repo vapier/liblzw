@@ -30,7 +30,6 @@ Makefile.in
 /libtool
 /stamp-h1
 
-/liblzw-config
 /liblzw.pc
 /*.tar.lzma
 /*.tar.xz
