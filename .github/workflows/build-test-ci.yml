@@ -1,0 +1,37 @@
+# GitHub actions workflow.
+# https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions
+
+name: Build+Test CI
+
+on:
+  push:
+    branches: [main, gh-actions]
+    tags: [v*]
+  pull_request:
+    types: [opened]
+    branches: [main]
+
+jobs:
+  build-test-posix:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        cc: [gcc, clang]
+        exclude:
+          - os: macos-latest
+            cc: gcc
+    runs-on: ${{ matrix.os }}
+    env:
+      CC: ${{ matrix.cc }}
+    steps:
+    - uses: actions/checkout@v2
+    - name: install software
+      if: ${{ matrix.os == 'macos-latest' }}
+      run: brew install autoconf automake libtool
+    - run: ./autogen.sh
+    - run: ./configure --enable-werror --disable-silent-rules
+    - run: make
+    - run: make check
+    - run: make install DESTDIR="${PWD}/root/"
+    - run: ls -lRa root
+    - run: make distcheck
