@@ -1,5 +1,5 @@
 # GitHub actions workflow.
-# https://help.github.com/en/actions/automating-your-workflow-with-github-actions/workflow-syntax-for-github-actions
+# https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
 
 name: Build+Test CI
 
@@ -24,7 +24,7 @@ jobs:
     env:
       CC: ${{ matrix.cc }}
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v7
     - name: install software
       if: ${{ matrix.os == 'macos-latest' }}
       run: brew install autoconf automake libtool
