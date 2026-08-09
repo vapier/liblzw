@@ -1,14 +1,13 @@
 AC_INIT([liblzw], [0.4], [https://github.com/vapier/liblzw/issues], [], [https://github.com/vapier/liblzw])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([m4])
-AC_CONFIG_HEADER([config.h])
+AC_CONFIG_HEADERS([config.h])
 
 AM_INIT_AUTOMAKE([-Wall 1.15 dist-xz foreign no-dist-gzip silent-rules])
 AM_SILENT_RULES([yes])
 
-AC_LIBTOOL_WIN32_DLL
 AM_PROG_AR
-LT_INIT
+LT_INIT([win32-dll])
 AC_ENABLE_SHARED
 AC_ENABLE_STATIC
 
