@@ -1,0 +1,12 @@
+[codespell]
+skip =
+  ./.deps/*,
+  ./autom4te.cache/*,
+  ./build-aux/*,
+  ./configure,
+  ./libtool,
+  ./m4/*,
+  *~,
+  *.[aoZ],
+  *.bz2,
+  *.l[ao],

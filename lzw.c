@@ -70,7 +70,7 @@ lzwFile *lzw_fdopen(int fd)
 	ret->rsize = 0;
 
 	ret->flags = buf[2];
-	ret->maxbits = ret->flags & 0x1f;    /* Mask for 'number of compresssion bits' */
+	ret->maxbits = ret->flags & 0x1f;    /* Mask for 'number of compression bits' */
 	ret->block_mode = ret->flags & 0x80;
 
 	ret->n_bits = INIT_BITS;

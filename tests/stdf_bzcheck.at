@@ -1,5 +1,5 @@
 dnl these suckers create megs of output which autotest
-dnl cant handle so do bzcmp ourselves
+dnl can't handle so do bzcmp ourselves
 m4_defun([AT_QUICK_BZCHECK],[
 
 AT_SETUP([$1])
